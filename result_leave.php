@@ -47,29 +47,32 @@
     
     $dy = date('Y');
 
-    $title = $_POST['title'];
+    // $title = $_POST['title'];
 
-    $teach = $_POST['teach'];
-    $position = $_POST['position'];
+    // $teacher = $_POST['teacher'];
+    // $position = $_POST['position'];
 
-    $cause_now = $_POST['cause_now'];
-    $sday_now = $_POST['sday_now'];
-    $lday_now = $_POST['lday_now'];
-    $sumday_now = $_POST['sumday_now'];
+    // $cause_now = $_POST['case_now'];
+    // $case1 = $_POST['case1'];
+    // $case2 = $_POST['case2'];
 
-    $cause_past = $_POST['cause_past'];
-    $sday_past = $_POST['sday_past'];
-    $lday_past = $_POST['lday_past'];
-    $sumday_past = $_POST['sumday_past'];
+    // $sday_now = $_POST['sday_now'];
+    // $lday_now = $_POST['lday_now'];
+    // $sumday_now = $_POST['sumday_now'];
 
-    $home_id = $_POST['home_id'];
-    $road = $_POST['road'];
-    $soi = $_POST['soi'];
-    $tambon = $_POST['tambon'];
-    $amphue = $_POST['amphue'];
-    $province = $_POST['province'];
-    $tel = $_POST['tel'];
-    $place_work = $_POST['place_work'];
+    // $cause_past = $_POST['cause_past'];
+    // $sday_past = $_POST['sday_past'];
+    // $lday_past = $_POST['lday_past'];
+    // $sumday_past = $_POST['sumday_past'];
+
+    // $home_id = $_POST['home_id'];
+    // $road = $_POST['road'];
+    // $soi = $_POST['soi'];
+    // $tambon = $_POST['tambon'];
+    // $amphue = $_POST['amphue'];
+    // $province = $_POST['province'];
+    // $tel = $_POST['tel'];
+    // $place_work = $_POST['place_work'];
 
 ?>
 
@@ -79,6 +82,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ใบลา</title>
+
     <style>
         @font-face {
             font-family: 'THSarabun';
@@ -166,6 +170,7 @@
         }
 
     </style>
+
 </head>
 <body>
 
@@ -173,6 +178,8 @@
     <h3>วิทยาลัยการอาชีพปัตตานี</h3>
 
     <br>
+
+    <!-- เริ่มต้น วัน/เดือน/ปีที่เขียน -->
 
     <div class="now">
         วันที่ 
@@ -194,8 +201,15 @@
             &nbsp;&nbsp;&nbsp;
         </span>
     </div>
+
+    <!-- สิ้นสุด วัน/เดือน/ปีที่เขียน -->
+
     <div style="padding: 5px"></div>
+
     <div class="main">
+
+        <!-- เริ่มต้น เกริ่นนำเอกสาร -->
+
         เรื่อง&nbsp;
         <span>
             &nbsp;&nbsp;&nbsp;
@@ -212,12 +226,18 @@
             &nbsp;&nbsp;&nbsp;
         </span>
 
+        <!-- สิ้นสุด เกริ่นนำเอกสาร -->
+
         <br><br>
 
-        <!-- Open tab -->
+        <!-- เริ่มต้น สร้างแท็บย่อหน้า -->
+
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <!-- Finish tab -->
+
+        <!-- สิ้นสุด สร้างแท็บย่อหน้า -->
+
+        <!-- เริ่มต้น ข้อมูลเบื้องต้น -->
 
         ข้าพเจ้า
         <span>
@@ -242,7 +262,11 @@
         </span>
         &nbsp;&nbsp; สำนักงานคณะกรรมการการอาชีวศึกษา &nbsp;&nbsp;กระทรวงศึกษาธิการ
 
+        <!-- สิ้นสุด ข้อมูลเบื้องต้น -->
+
         <p class="para2"></p>
+
+        <!-- เริ่มต้น เลือกประเภทการลา -->
 
         <b>ขอลา</b> <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -271,7 +295,11 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <input type="checkbox"> ช่วยเหลือภรรยาที่คลอดบุตร
 
+        <!-- สิ้นสุด เลือกประเภทการลา -->
+
         <p class="para2"></p>
+
+        <!-- เริ่มต้น วัน/เดือน/ปีที่ลา -->
 
         ตั้งแต่วันที่
         <span>
@@ -293,7 +321,11 @@
         </span>
         วัน
 
+        <!-- สิ้นสุด วัน/เดือน/ปีที่ลา -->
+
         <p class="para2"></p>
+
+        <!-- เริ่มต้น ประเภทที่ลา ครั้งก่อน -->
 
         ข้าพเจ้าได้ลา
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -324,7 +356,11 @@
         </span>
         วัน
 
+        <!-- สิ้นสุด ประเภทที่ลา ครั้งก่อน -->
+
         <p class="para1"></p>
+
+        <!-- เริ่มต้น สถานที่ติดต่อ -->
 
         ในระหว่างลา สามารถติดต่อข้าพเจ้าได้ที่ 
         <span>
@@ -371,10 +407,17 @@
             073-333011
             &nbsp;&nbsp;&nbsp;&nbsp;
         </span>
+
+        <!-- สิ้นสุด สถานที่ติดต่อ -->
+
         <!-- <p class="para3"></p> -->
+
         <br><br>
         <div class="ttt">
             <table>
+        
+        <!-- เริ่มต้น มอบหมายผู้รับแทน และ ลงชื่อ -->
+
                 <tr>
                     <td style="width: 70%;">
                         ในระหว่างที่ข้าพเจ้าลา ขอมอบให้
@@ -419,6 +462,11 @@
                         )
                     </td>
                 </tr>
+
+        <!-- สิ้นสุด มอบหมายผู้รับแทน และ ลงชื่อ -->
+
+        <!-- เริ่มต้น ผู้ปฏิบัติราชการแทน และ ลงชื่อหัวหน้างาน/แผนก -->
+
                 <tr>
                     <td>
                         <br>
@@ -467,11 +515,17 @@
                         </span>
                     </td>
                 </tr>
+
+        <!-- สิ้นสุด ผู้ปฏิบัติราชการแทน และ ลงชื่อหัวหน้างาน/แผนก -->
+
             </table>
         </div>
         <div class="ttt">
             <table>
                 <tr>
+
+        <!-- เริ่มต้น ตารางข้อมูลการลา -->
+
                     <td  style="font-size: 15px; width: 60%;">
                             <table>
                                 <tr>
@@ -511,6 +565,11 @@
                                 </tr>
                             </table>
                     </td>
+
+        <!-- สิ้นสุด ตารางข้อมูลการลา -->
+
+        <!-- เริ่มต้น ความเห็นของผู้บังคับบัญชา -->
+
                     <td style="text-align: center;">
                         <b>ความเห็นของผู้บังคับบัญชา</b>
                         <br>
@@ -534,8 +593,14 @@
                         <p class="para2"></p>
                         รองผู้อำนวยการ ฝ่ายบริหารทรัพยากร
                     </td>
+
+        <!-- สิ้นสุด ความเห็นของผู้บังคับบัญชา -->
+
                 </tr>
                 <tr>
+
+        <!-- เริ่มต้น หัวหน้างานบุคลากร -->
+
                     <td style="width: 70%;">
                         <div class="per">
                             ลงชื่อ
@@ -566,6 +631,11 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </div>
                     </td>
+
+        <!-- สิ้นสุด หัวหน้างานบุคลากร -->
+
+        <!-- เริ่มต้น ผู้อำนวยการวิทยาลัยการอาชีพปัตตานี -->
+
                     <td style="text-align: center;">
                         <br>
                         <b>คำสั่ง</b>
@@ -595,6 +665,9 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                     </td>
+
+        <!-- สิ้นสุด ผู้อำนวยการวิทยาลัยการอาชีพปัตตานี -->
+
                 </tr>
             </table>
         </div>
