@@ -107,7 +107,7 @@
                     <div class="title">ส่วนที่ 1 :</div>
                     <div class="field">
                         <div class="label">เรื่อง</div>
-                        <select name="leave">
+                        <select name="title">
                             <option value="ลาป่วย">ลาป่วย</option>
                             <option value="ลากิจส่วนตัว">ลากิจส่วนตัว</option>
                             <option value="ลาคลอดบุตร">ลาคลอดบุตร</option>
@@ -116,7 +116,7 @@
                     </div>
                     <div class="field">
                         <div class="label">ชื่อ - สกุล</div>
-                        <input type="text" name="fullname">
+                        <input type="text" name="teacher">
                     </div>
                     <div class="field">
                         <div class="label">ตำแหน่ง</div>

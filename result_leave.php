@@ -47,14 +47,44 @@
     
     $dy = date('Y');
 
-    // $title = $_POST['title'];
+    $status1 = "";
+    $status2 = "";
+    $status3 = "";
+    $status4 = "";
 
-    // $teacher = $_POST['teacher'];
-    // $position = $_POST['position'];
+    $title = $_POST['title'];
+
+    $teacher = $_POST['teacher'];
+    $position = $_POST['position'];
+
+    $case = $_POST['case_now'];
+
+    switch ($case) {
+        case 'ป่วย':
+            $cause_now = $case;
+            $status1 = "checked";
+            break;
+        
+        case 'กิจส่วนตัว':
+            $cause_now = $case;
+            $status2 = "checked";
+            break;
+
+        case 'คลอดบุตร':
+            $cause_now = $case;
+            $status3 = "checked";
+            break;
+
+        default:
+            $cause_now = "ช่วยเหลือภรรยาที่คลอดบุตร";
+            $status4 = "checked";
+            break;
+    }
+
 
     // $cause_now = $_POST['case_now'];
-    // $case1 = $_POST['case1'];
-    // $case2 = $_POST['case2'];
+    $case1 = $_POST['case1'];
+    $case2 = $_POST['case2'];
 
     // $sday_now = $_POST['sday_now'];
     // $lday_now = $_POST['lday_now'];
@@ -213,7 +243,7 @@
         เรื่อง&nbsp;
         <span>
             &nbsp;&nbsp;&nbsp;
-                ลาป่วย
+                <?php echo $title; ?>
             &nbsp;&nbsp;&nbsp;
         </span>
 
@@ -242,13 +272,13 @@
         ข้าพเจ้า
         <span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                นายธีระ  บินกาเซ็ม 
+                <?php echo $teacher; ?> 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
         ตำแหน่ง
         <span>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                ครู
+                <?php echo $position; ?>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
         
@@ -270,30 +300,31 @@
 
         <b>ขอลา</b> <br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox" checked> ป่วย เนื่องจาก
+        <input type="checkbox" <?php echo $status1; ?>>
+        <?php echo $cause_now; ?> เนื่องจาก
         <span>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            ไปหาหมอตามนัด
+            <?php echo $case1; ?>
             &nbsp;&nbsp;&nbsp;&nbsp;
         </span>
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox"> กิจส่วนตัว เนื่องจาก
+        <input type="checkbox" <?php echo $status2; ?>> 
+        <?php echo $cause_now; ?> เนื่องจาก
         <span>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            &#45;
+            <?php echo $case2; ?>
             &nbsp;&nbsp;&nbsp;&nbsp;
         </span><br>
 
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox"> คลอดบุตร 
+        <input type="checkbox" <?php echo $status3; ?>> คลอดบุตร 
 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="checkbox"> ช่วยเหลือภรรยาที่คลอดบุตร
+        <input type="checkbox" <?php echo $status4; ?>> ช่วยเหลือภรรยาที่คลอดบุตร
 
         <!-- สิ้นสุด เลือกประเภทการลา -->
 
