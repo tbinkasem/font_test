@@ -20,7 +20,7 @@
 
             session_write_close();
 
-            header("location:form_leave.php");
+            header("location: leave.php");
 
     }
     mysqli_close($conn);

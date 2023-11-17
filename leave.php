@@ -1,6 +1,14 @@
 <?php
 
-    include "conf.php";
+    include 'conf.php';
+        
+    session_start();
+
+    if($_SESSION['UserName'] == "")
+    {
+        echo "<h2>กรุณาทำการเข้าสู่ระบบ...</h2>";
+        exit();
+    }
 
     $dd = date('d');
 
@@ -89,8 +97,8 @@
 
         .nav{
             background: linear-gradient(-90deg, #dcf803, #0327ef);
-            height: 150px;
-            margin-bottom: 15px;
+            height: 200px;
+            margin-top: 1%;
             border-style: groove;
         }
 
@@ -108,11 +116,21 @@
             margin: auto;
         }
 
-        span{
-            display: block;
-            color: white;
+        .logout{
+            position: fixed;
+            color: black;
             padding: 10px;
             margin: auto;
+            background-color: chartreuse;
+            text-decoration: none;
+            border-radius: 15px;
+            width: 120px;
+            text-align: center;
+        }
+        .logout:hover{
+            position: fixed;
+            color: black;
+            background-color: yellow;
         }
 
         .position{            
@@ -214,6 +232,11 @@
             วัน<?php echo $dn; ?>ที่  <?php echo $dd; ?>  <?php echo $dm; ?> พ.ศ.<?php echo ($dy+543); ?>
         </marquee>
         <h2>ธีระ  บินกาเซ็ม</h2>
+        <br>
+        <a href="logout.php" class="logout">
+            ออกจากระบบ
+        </a>
+    
     </div>
 
     <br>
@@ -239,8 +262,6 @@
         </a>
         
     </div>
-
-
     
 </body>
 </html>
